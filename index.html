@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Array.FindElements
+		</title>
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Array.FindElements</h1>
+			<p>The findElements() method works for an array of objects. It returns an array of objects with the matching search Otherwise an empty array is returned.</p>
+			<p>
+				<a class="link" href="ArrayFindElements.js">View Source</a> | 
+				<a class="link" href="index-tests.html">View Tests</a>
+			</p>
+			<hr />
+			<h2>Syntax</h2>
+			<pre>arr.findElements(object)</pre>
+			<h2>Examples</h2>
+			<pre>
+var arr = [
+	{name: 'Sravan', id:'srv', location: 'blr'},
+	{name: 'Aparna', id:'appy', location: 'blr'},
+	{name: 'Kumar', id:'kum', location: 'pune'}
+];
+
+arr.findElements(); // returns arr
+arr.findElements({name: 'Aparna'})[0];  // returns arr[1]
+arr.findElements({id: 'appy'})[0]; // returns arr[1]
+arr.findElements({location: 'blr'}); // returns [{name: 'Sravan', id:'srv', location: 'blr'}, {name: 'Aparna', id:'appy', location: 'blr'}]
+arr.findElements({location: 'delhi'}); // returns [] (No matches found, returned empty array)
+
+			</pre>
+		</div>
+	</body>
+</html>
